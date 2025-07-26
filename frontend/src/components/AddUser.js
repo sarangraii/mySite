@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../styles/AddUser.css';
-import axios from 'axios';
+// import axios from 'axios';
+import api from '../config/api';
 
 const AddUser = () => {
   const [formData, setFormData] = useState({

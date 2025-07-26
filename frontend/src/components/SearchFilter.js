@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import api from '../config/api';
 import '../styles/SearchFilter.css'
 import { Link } from 'react-router-dom';
 const SearchFilter = () => {
@@ -49,7 +50,7 @@ const SearchFilter = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/search', filters);
+      const response = await api.post('/api/search', filters);
       setResults(response.data);
     } catch (err) {
       setError('Failed to fetch results. Please try again.');
