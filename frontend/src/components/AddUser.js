@@ -186,7 +186,7 @@ const AddUser = () => {
           formDataToSend.append('profilePhoto', profilePhoto);
         }
         
-        const response = await axios.post('http://localhost:5000/api/users/create', formDataToSend, {
+        const response = await api.post('/api/users/create', formDataToSend, {
           headers: {
             'Content-Type': 'multipart/form-data',
           }

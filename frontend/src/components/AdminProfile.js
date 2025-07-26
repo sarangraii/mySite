@@ -26,7 +26,7 @@ const AdminProfile = () => {
 
     const fetchAdminProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin/profile", {
+        const response = await api.get("/api/admin/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAdmin(response.data);
@@ -45,7 +45,7 @@ const AdminProfile = () => {
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin/users", {
+        const response = await api.get("/api/admin/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUsers(response.data);
@@ -79,8 +79,8 @@ const AdminProfile = () => {
     const token = localStorage.getItem("token");
     
     try {
-      const response = await axios.put(
-        "http://localhost:5000/api/admin/profile",
+      const response = await api.put(
+        "/api/admin/profile",
         editForm,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -105,8 +105,8 @@ const AdminProfile = () => {
     const token = localStorage.getItem("token");
     
     try {
-      await axios.put(
-        `http://localhost:5000/api/admin/users/${userId}/status`,
+      await api.put(
+        `/api/admin/users/${userId}/status`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${token}` },

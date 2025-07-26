@@ -14,7 +14,7 @@ const Payment = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/payment/create-order", {
+            const response = await fetch("/api/payment/create-order", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

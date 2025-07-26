@@ -131,7 +131,9 @@ function Register() {
         type:formData.type
       };
       
-      const response = await axios.post("http://localhost:5000/api/auth/register", sanitizedData);
+      // const response = await axios.post("http://localhost:5000/api/auth/register", sanitizedData);
+
+      const response = await api.post("/api/auth/register", sanitizedData);
       
       // Automatically log the user in
       localStorage.setItem("token", response.data.token);

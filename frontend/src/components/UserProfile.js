@@ -28,7 +28,7 @@ function UserProfile() {
       }
       
       try {
-        const response = await axios.get("http://localhost:5000/api/user/user/profile", {
+        const response = await api.get("/api/user/user/profile", {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -76,8 +76,8 @@ function UserProfile() {
     const token = localStorage.getItem("token");
     
     try {
-      const response = await axios.put(
-        "http://localhost:5000/api/user/profile",
+      const response = await api.put(
+        "/api/user/profile",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }
