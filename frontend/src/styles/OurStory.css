@@ -1,0 +1,121 @@
+/* OurStory.css */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.bg-rose-50 {
+  background-color: #fff5f7;
+}
+
+.text-rose-700 {
+  color: #c53030;
+}
+
+.text-rose-600 {
+  color: #222023;
+  text-decoration:none ;
+}
+
+.bg-rose-600 {
+  background-color: #D5BFB9;
+}
+
+.bg-rose-100 {
+  background-color: #fff5f7;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  color: #222023;
+}
+.text-2xl {
+  font-size: 1.25rem;
+  color: #222023;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  color: #222023;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  color: #222023;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  display: inline-block;
+  background-color: white;
+  color: #d53f8c;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #fff0f5;
+}

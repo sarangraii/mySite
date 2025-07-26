@@ -1,0 +1,365 @@
+
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #D5BFB9 0%, #D5BFB9 100%);
+}
+
+/* Auth Card */
+.auth-card {
+  width: 100%;
+  max-width: 550px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+.register-card {
+  padding: 2.5rem;
+}
+
+/* Auth Header */
+.auth-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.auth-header h2 {
+  color: #4a5568;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.auth-header p {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.4rem;
+}
+
+input, select {
+  font-family: inherit;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* Date input styling */
+input[type="date"] {
+  color: #4a5568;
+  appearance: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  background-color: #D5BFB9;
+  color: #222023;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(213, 63, 140, 0.15);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background-color: #222023;
+  color:#D5BFB9;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.submit-btn:disabled {
+  background: linear-gradient(135deg, #f687b3 0%, #ed64a6 100%);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Auth Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #edf2f7;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.auth-footer a {
+  color: #222023;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.auth-footer a:hover {
+  color: #222023;
+  text-decoration: none;
+}
+
+/* Error Styling */
+.error-message {
+  width: 100%;
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border-left: 4px solid #fc8181;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.error-input {
+  border-color: #fc8181 !important;
+  background-color: #fff5f5 !important;
+}
+
+.field-error {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.field-error:before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #e53e3e;
+  color: white;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1.5rem;
+  }
+  
+  .register-card {
+    padding: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .auth-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.form-group:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.form-group:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Optional: Password strength indicator */
+.password-strength {
+  height: 4px;
+  width: 100%;
+  background: #edf2f7;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.password-strength-meter {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-weak {
+  width: 25%;
+  background-color: #fc8181;
+}
+
+.strength-medium {
+  width: 50%;
+  background-color: #f6ad55;
+}
+
+.strength-strong {
+  width: 75%;
+  background-color: #68d391;
+}
+
+.strength-very-strong {
+  width: 100%;
+  background-color: #38a169;
+}
+
+.country-code-select {
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.phone-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.phone-input-container .error-input {
+  border-color: red;
+}
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-list {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-list input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+.dropdown-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.field-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

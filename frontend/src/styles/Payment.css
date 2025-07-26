@@ -1,0 +1,99 @@
+/* Payment.css */
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+    padding: 20px;
+}
+
+.payment-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.payment-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.payment-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.payment-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+.payment-amount-section {
+    margin-bottom: 20px;
+}
+
+.payment-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.payment-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.payment-input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.payment-error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: #2980b9;
+}
+
+.payment-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}

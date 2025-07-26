@@ -1,0 +1,283 @@
+/* AdminProfile.css */
+.admin-profile-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .admin-sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .admin-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 15px;
+  }
+  
+  .admin-info h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+  }
+  
+  .admin-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .admin-menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .admin-menu button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .admin-menu button.active {
+    background-color: #3498db;
+  }
+  
+  .admin-menu .logout-btn {
+    margin-top: auto;
+    background-color: rgba(231, 76, 60, 0.7);
+  }
+  
+  .admin-menu .logout-btn:hover {
+    background-color: rgba(231, 76, 60, 1);
+  }
+  
+  .admin-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  /* Users table styling */
+  .users-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .users-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .users-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .users-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .users-table tr:hover {
+    background-color: #f5f9ff;
+  }
+  
+  .status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .status-badge.active {
+    background-color: #e3f9e5;
+    color: #1e7e34;
+  }
+  
+  .status-badge.pending {
+    background-color: #fff8e1;
+    color: #f57c00;
+  }
+  
+  .status-badge.deactivated {
+    background-color: #feeeee;
+    color: #dc3545;
+  }
+  
+  .action-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+  }
+  
+  .approve-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .approve-btn:hover {
+    background-color: #218838;
+  }
+  
+  .deactivate-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .deactivate-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .activate-btn {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .activate-btn:hover {
+    background-color: #138496;
+  }
+  
+  /* Edit profile section */
+  .edit-profile-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-profile-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .save-btn, .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .save-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .cancel-btn {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e1e1e1;
+  }
+  
+  .error-message {
+    background-color: #feeeee;
+    color: #dc3545;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .loading, .no-users {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .admin-profile-container {
+      flex-direction: column;
+    }
+  
+    .admin-sidebar {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .admin-content {
+      padding: 15px;
+    }
+  
+    .users-table th,
+    .users-table td {
+      padding: 10px;
+    }
+  }

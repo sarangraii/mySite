@@ -1,0 +1,168 @@
+/* Privacy Policy Component Styles */
+
+/* Main container */
+.privacy-policy-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  /* Header section */
+  .privacy-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .privacy-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  
+  .privacy-date {
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  .privacy-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+  
+  /* Accordion sections */
+  .privacy-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .section-container {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  
+  .section-container:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-button {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    background-color: #f8fafc;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .section-button:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #334155;
+  }
+  
+  .section-icon {
+    font-size: 1.25rem;
+    color: #64748b;
+    transition: transform 0.2s ease;
+  }
+  
+  .section-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .section-content {
+    padding: 1.25rem;
+    color: #475569;
+    line-height: 1.6;
+    background-color: #ffffff;
+    border-top: 1px solid #f1f5f9;
+  }
+  
+  /* Content formatting */
+  .section-content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #334155;
+  }
+  
+  .section-content h4:first-child {
+    margin-top: 0;
+  }
+  
+  .section-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-content li {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .section-content p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  .privacy-footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+  }
+  
+  .privacy-disclaimer {
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .privacy-policy-container {
+      padding: 1.5rem;
+    }
+    
+    .privacy-title {
+      font-size: 1.75rem;
+    }
+    
+    .section-button {
+      padding: 0.875rem 1rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .privacy-policy-container {
+      box-shadow: none;
+      max-width: 100%;
+    }
+    
+    .section-button {
+      background-color: #ffffff;
+    }
+    
+    .section-content {
+      display: block !important;
+    }
+  }
